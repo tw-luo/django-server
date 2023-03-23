@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test CORS</title>
+</head>
+<body>
+    <script>
+        fetch('http://127.0.0.1:8000/game/api/get_status/')
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+    </script>
+</body>
+</html>
