@@ -14,8 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-
+from django.urls import path, include,re_path
+from game.views.index import redirect_home
 from hello_world.core import views as core_views
 
 urlpatterns = [
@@ -23,4 +23,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("game/",include('game.urls.index')),
     path("__reload__/", include("django_browser_reload.urls")),
+    re_path(r'^.*$', redirect_home),
 ]
