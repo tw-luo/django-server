@@ -7,4 +7,4 @@ class Score(models.Model):
     test_date = models.DateTimeField('date published')
     score=models.IntegerField(default=0)
     def __str__(self):
-        return str(self.score)
+        return self.user.username+" "+self.test_type+" "+str(self.score)
