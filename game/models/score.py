@@ -7,4 +7,4 @@ class Score(models.Model):
     test_date = models.DateTimeField('date published')
     score=models.IntegerField(default=0)
     def __str__(self):
-        return self.user.username+" "+self.test_type+" "+str(self.score)
+        return f"{self.user.username} - {self.test_type} ({self.score}) on {self.test_date.strftime('%Y-%m-%d %H:%M:%S')}"
