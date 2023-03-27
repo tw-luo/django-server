@@ -7,3 +7,5 @@ git pull
 cp build/index.html ../hello_world/templates/index.html
 cp -r build/static/js ../hello_world/static/js
 cp -r build/static/css ../hello_world/static/css
+
+git push
